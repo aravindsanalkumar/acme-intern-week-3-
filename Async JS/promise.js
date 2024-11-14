@@ -30,7 +30,7 @@ let stocks = {
  // select topping - 3 sec
  // serve ice cream - 2 sec
 
-let is_shop_open = true;
+let is_shop_open = false;
 
 let order = (time,callback_production) => {
     return new Promise ((resolve,reject)=>{
@@ -63,4 +63,10 @@ order(2000,()=>console.log(`${stocks.Fruits[0]} taken`))
 })
 .then(()=>{
     return order(2000,()=>console.log('ice cream is served'));
+})
+.catch(()=>{
+    console.log('customer left');
+})
+.finally(()=>{
+    console.log('day ended , shop is closed');
 })
