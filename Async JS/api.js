@@ -6,8 +6,8 @@ const dotImageDiv = document.getElementById('dogImage');
 fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => response.json())
     .then(json => {
-        console.log(json);
-        console.log(json.message);
+        //console.log(json);
+        //console.log(json.message);
         dotImageDiv.innerHTML = `<imgx src="${json.message}" width="300" alt="">`
     }) 
 
@@ -37,3 +37,11 @@ promise1
         console.log('restaurent closed');
     })
 
+const getDog = async () =>{
+    const url = 'https://dog.ceo/api/breeds/image/random';
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+}
+
+getDog();

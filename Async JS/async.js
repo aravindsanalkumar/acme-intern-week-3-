@@ -27,7 +27,9 @@ let is_shop_open = true;
 let toppings_choice = () => {
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve(console.log('which topping would u like?'));
+            if(is_shop_open){
+                resolve(console.log('which topping would u like?'));
+            }
         },3000);
     })
 }
