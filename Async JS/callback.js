@@ -29,9 +29,9 @@ let stocks = {
  // cut the fruit - 2 sec
  // add water and ice - 1 sec
  // start the machine - 1 sec
- // select container - 2
- // select topping -3
- // serve ice cream -2
+ // select container - 2 sec
+ // select topping - 3 sec
+ // serve ice cream - 2 sec
 
 let order = (fruit_name,call_backProduction) => {
     console.log('order placed,call production');
